@@ -1,6 +1,5 @@
 import React from 'react'
-
-function TaskItem(task, setTaskStatus, removeTask) {
+function TaskItem({task, setTaskStatus, removeTask}) {
   return (
     <li key={task.id} className={task.status ? "done" : ""}>
             <span className="label">{task.title}</span>
@@ -12,7 +11,7 @@ function TaskItem(task, setTaskStatus, removeTask) {
                 onChange={(e) => setTaskStatus(task.id, e.target.checked)}
               />
               <button
-                onClick={(e) => removeTask(task.id)}
+                onClick={() => removeTask(task.id)}
                 className="btn-action btn-action-delete"
               >
                 X
@@ -22,4 +21,4 @@ function TaskItem(task, setTaskStatus, removeTask) {
   )
 }
 
-export default TaskItem
+export default TaskItem;

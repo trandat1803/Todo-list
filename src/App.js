@@ -57,8 +57,8 @@ function App() {
         setShowIncomplete={setShowIncomplete}
       />
       <AddTaskForm
-        handleSubmit={handleSubmit}
         newTask={newTask}
+        handleSubmit={handleSubmit}
         handleInputChange={handleInputChange}
       />
     </div>

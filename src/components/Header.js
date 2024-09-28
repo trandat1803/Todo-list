@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header(title, subTitle) {
+function Header({title, subTitle}) {
   return (
     <div>
       <h1 className="title">
